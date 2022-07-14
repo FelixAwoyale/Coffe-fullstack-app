@@ -37,7 +37,7 @@ def get_drinks():
     else:
         return jsonify({
             'success': True,
-            'drinks': [drink.short() for drink in drinks]
+            'Drinks': [drink.short() for drink in drinks]
         })
 
 '''
@@ -59,7 +59,7 @@ def get_drinks_detail(jwt, drink_id):
         else:
             return jsonify({
                 'success': True,
-                'drinks': [drink.long() for drink in drinks]
+                'Drinks': [drink.long() for drink in drinks]
             })
     except:
         abort(422)
@@ -87,7 +87,7 @@ def create_drink(jwt):
 
         return jsonify({
             'success': True,
-            'drinks': [drink.long()]
+            'Drinks': [drink.long()]
         })
 
     except:
@@ -125,7 +125,7 @@ def update_drinks(jwt, drink_id):
 
     return jsonify({
         'success': True,
-        'drinks': [drink.long()]
+        'Drinks': [drink.long()]
     })
 
 
